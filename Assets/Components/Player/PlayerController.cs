@@ -1,9 +1,5 @@
 using Sirenix.OdinInspector;
-using System;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.Windows;
 
 public class PlayerController : SerializedMonoBehaviour
 {
@@ -33,6 +29,7 @@ public class PlayerController : SerializedMonoBehaviour
     [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
     public float Gravity = -15.0f;
 
+    private PlayerStateMachine playerStateMachine;
     private PlayerInputSystem playerInputSystem;
     private CharacterController playerBody;
 
@@ -43,6 +40,7 @@ public class PlayerController : SerializedMonoBehaviour
 
     void Start()
     {
+        playerStateMachine = GetComponent<PlayerStateMachine>();
         playerInputSystem = GetComponent<PlayerInputSystem>();
         playerBody = GetComponent<CharacterController>();
     }
