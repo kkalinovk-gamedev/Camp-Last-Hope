@@ -1,0 +1,611 @@
+HELLO 4/6/2026 10:01:28 PM VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    6,
+    1410
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.3",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 4/6/2026 10:01:28 PM VALID
+{
+  "message": "Connected"
+}
+
+HELLO 4/7/2026 4:21:28 PM VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    70,
+    5009
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.3",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 4/7/2026 4:21:28 PM VALID
+{
+  "message": "Connected"
+}
+
+HELLO 4/7/2026 4:22:18 PM VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    70,
+    5009
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.3",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 4/7/2026 4:22:18 PM VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 4/7/2026 4:22:34 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/7/2026 4:22:34 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "CC3_Base_Plus",
+      "type": "AVATAR",
+      "link_id": "X9FKP8Q7TO83NIQ13E77"
+    }
+  ]
+}
+
+NOTIFY 4/7/2026 4:22:34 PM VALID
+{
+  "message": "Exporting Avatar: CC3_Base_Plus"
+}
+
+NOTIFY 4/7/2026 4:23:13 PM VALID
+{
+  "message": "Avatar Import: CC3_Base_Plus"
+}
+
+CHARACTER 4/7/2026 4:23:13 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\CC3_Base_Plus\\CC3_Base_Plus.fbx",
+  "remote_id": "",
+  "name": "CC3_Base_Plus",
+  "type": "AVATAR",
+  "link_id": "X9FKP8Q7TO83NIQ13E77",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/7/2026 4:27:54 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/7/2026 4:27:54 PM VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "CC3_Base_Plus",
+      "type": "AVATAR",
+      "link_id": "X9FKP8Q7TO83NIQ13E77"
+    }
+  ]
+}
+
+NOTIFY 4/7/2026 4:27:54 PM VALID
+{
+  "message": "Exporting Motion: CC3_Base_Plus_Motion"
+}
+
+NOTIFY 4/7/2026 4:27:58 PM VALID
+{
+  "message": "Motion Import: CC3_Base_Plus_Motion"
+}
+
+MOTION 4/7/2026 4:27:58 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\CC3_Base_Plus_Motion\\CC3_Base_Plus_Motion.fbx",
+  "remote_id": "",
+  "name": "CC3_Base_Plus",
+  "type": "AVATAR",
+  "link_id": "X9FKP8Q7TO83NIQ13E77",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 9700,
+  "start_frame": 0,
+  "end_frame": 97,
+  "time": 0,
+  "frame": 0,
+  "motion_prefix": ""
+}
+
+HELLO 4/16/2026 6:56:17 PM VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    6,
+    1410
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.5",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 4/16/2026 6:56:17 PM VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 4/16/2026 6:57:06 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 6:57:06 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 6:57:06 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 6:58:03 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 6:58:03 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:00:37 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:00:37 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:00:38 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:01:32 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:01:32 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:05:45 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:05:45 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:05:45 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:06:36 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:06:36 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:20:57 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:20:57 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "1SPBON5MDEZ78PWAGSXW"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:20:58 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:21:20 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:21:20 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "1SPBON5MDEZ78PWAGSXW",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:24:09 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:24:09 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:24:09 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:25:05 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:25:05 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+RELINK 4/16/2026 7:32:57 PM VALID
+{
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "name": "George",
+  "type": "AVATAR"
+}
+
+RELINK 4/16/2026 7:32:59 PM VALID
+{
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "name": "George",
+  "type": "AVATAR"
+}
+
+RELINK 4/16/2026 7:32:59 PM VALID
+{
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "name": "George",
+  "type": "AVATAR"
+}
+
+RELINK 4/16/2026 7:33:00 PM VALID
+{
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "name": "George",
+  "type": "AVATAR"
+}
+
+NOTIFY 4/16/2026 7:38:46 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:38:46 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:38:46 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:39:35 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:39:35 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:40:28 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:40:28 PM VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:40:28 PM VALID
+{
+  "message": "Exporting Avatar: George"
+}
+
+NOTIFY 4/16/2026 7:41:19 PM VALID
+{
+  "message": "Avatar Import: George"
+}
+
+CHARACTER 4/16/2026 7:41:19 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George\\George.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "motion_prefix": ""
+}
+
+NOTIFY 4/16/2026 7:43:48 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:43:48 PM VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:43:49 PM VALID
+{
+  "message": "Exporting Motion: George_Motion"
+}
+
+NOTIFY 4/16/2026 7:44:04 PM VALID
+{
+  "message": "Motion Import: George_Motion"
+}
+
+MOTION 4/16/2026 7:44:04 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George_Motion\\George_Motion.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "fps": 30.0,
+  "start_time": 0,
+  "end_time": 6100,
+  "start_frame": 0,
+  "end_frame": 30,
+  "time": 5000,
+  "frame": 25,
+  "motion_prefix": ""
+}
+
+HELLO 4/16/2026 7:53:03 PM VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    6,
+    1410
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.5",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 4/16/2026 7:53:04 PM VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 4/16/2026 7:53:07 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:53:07 PM VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:53:07 PM VALID
+{
+  "message": "Exporting Motion: George_Motion"
+}
+
+NOTIFY 4/16/2026 7:53:23 PM VALID
+{
+  "message": "Motion Import: George_Motion"
+}
+
+MOTION 4/16/2026 7:53:23 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George_Motion\\George_Motion.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "fps": 30.0,
+  "start_time": 0,
+  "end_time": 3800,
+  "start_frame": 0,
+  "end_frame": 19,
+  "time": 0,
+  "frame": 0,
+  "motion_prefix": ""
+}
+
+STOP 4/16/2026 7:58:18 PM VALID
+
+
+HELLO 4/16/2026 7:59:05 PM VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    6,
+    1410
+  ],
+  "Path": "C:\\Users\\User\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.5",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 4/16/2026 7:59:06 PM VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 4/16/2026 7:59:21 PM VALID
+{
+  "message": "Request"
+}
+
+REQUEST 4/16/2026 7:59:21 PM VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "George",
+      "type": "AVATAR",
+      "link_id": "DQQ8Y276FVGGK7HT8PDQ"
+    }
+  ]
+}
+
+NOTIFY 4/16/2026 7:59:21 PM VALID
+{
+  "message": "Exporting Motion: George_Motion"
+}
+
+NOTIFY 4/16/2026 7:59:42 PM VALID
+{
+  "message": "Motion Import: George_Motion"
+}
+
+MOTION 4/16/2026 7:59:42 PM VALID
+{
+  "path": "C:\\Users\\User\\repos\\Unity\\Mini Adventure\\RL_DataLink\\imports\\George_Motion\\George_Motion.fbx",
+  "remote_id": "",
+  "name": "George",
+  "type": "AVATAR",
+  "link_id": "DQQ8Y276FVGGK7HT8PDQ",
+  "fps": 30.0,
+  "start_time": 0,
+  "end_time": 44600,
+  "start_frame": 0,
+  "end_frame": 223,
+  "time": 1300,
+  "frame": 6,
+  "motion_prefix": ""
+}
+
