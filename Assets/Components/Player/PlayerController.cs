@@ -29,6 +29,14 @@ public class PlayerController : SerializedMonoBehaviour
     [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
     public float Gravity = -15.0f;
 
+    [SerializeField]
+    [ShowInInspector]
+    private float slideAngleThreshold = 30f;
+
+    [SerializeField]
+    [ShowInInspector]
+    private float slideFriction = 0f;
+
     private PlayerStateMachine playerStateMachine;
     private PlayerInputSystem playerInputSystem;
     private CharacterController playerBody;
@@ -37,6 +45,8 @@ public class PlayerController : SerializedMonoBehaviour
     private float targetRotation;
     private float rotationVelocity;
     private float verticalVelocity;
+    private Vector3 slideNormal;
+    private bool isSliding = false;
 
     void Start()
     {
@@ -101,10 +111,41 @@ public class PlayerController : SerializedMonoBehaviour
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
 
+        var movementMotion = targetDirection.normalized * (movementSpeed * Time.deltaTime) + new Vector3(0.0f, verticalVelocity, 0.0f) * Time.deltaTime;
+        movementMotion = ApplySlide(movementMotion);
+
         // move the player
-        playerBody.Move(targetDirection.normalized * (movementSpeed * Time.deltaTime) +
-                         new Vector3(0.0f, verticalVelocity, 0.0f) * Time.deltaTime);
+        playerBody.Move(movementMotion);
 
         characterAnimator.SetFloat(AnimatorMovementSpeedParameter, movementDirection.magnitude);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // Convert threshold angle to a y-normal value
+        // A vertical wall has normal.y = 0, a flat floor has normal.y = 1
+        float angleThresholdNormal = Mathf.Sin(slideAngleThreshold * Mathf.Deg2Rad);
+
+        if (hit.normal.y < angleThresholdNormal)
+        {
+            slideNormal = hit.normal;
+            isSliding = true;
+        }
+    }
+
+    private Vector3 ApplySlide(Vector3 moveDirection)
+    {
+        if (!isSliding) return moveDirection;
+
+        Vector3 projected = Vector3.ProjectOnPlane(moveDirection, slideNormal);
+
+        // ProjectOnPlane reduces magnitude — restore it to original speed
+        if (projected.magnitude > 0.001f)
+            projected = projected.normalized * moveDirection.magnitude;
+
+        Vector3 result = Vector3.Lerp(projected, moveDirection, slideFriction);
+
+        isSliding = false;
+        return result;
     }
 }
