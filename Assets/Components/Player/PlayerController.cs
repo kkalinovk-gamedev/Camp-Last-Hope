@@ -37,6 +37,10 @@ public class PlayerController : SerializedMonoBehaviour
     [ShowInInspector]
     private float slideFriction = 0f;
 
+    [SerializeField]
+    [ShowInInspector]
+    private bool movementLogsEnabled = false;
+
     private PlayerStateMachine playerStateMachine;
     private PlayerInputSystem playerInputSystem;
     private CharacterController playerBody;
@@ -72,28 +76,20 @@ public class PlayerController : SerializedMonoBehaviour
 
         var targetSpeed = playerInputSystem.IsRunning ? RunningSpeed : WalkingSpeed;
 
+        if(movementLogsEnabled)
+            Debug.Log($"Movement Input: {movementInput}, Target Speed: {targetSpeed}");
+
         if (movementInput == Vector2.zero)
             targetSpeed = 0f;
 
         float currentHorizontalSpeed = new Vector3(playerBody.velocity.x, 0.0f, playerBody.velocity.z).magnitude;
 
-        // accelerate or decelerate to target speed
-        if (currentHorizontalSpeed < targetSpeed || currentHorizontalSpeed > targetSpeed)
-        {
-            // creates curved result rather than a linear one giving a more organic speed change
-            // note T in Lerp is clamped, so we don't need to clamp our speed
-            movementSpeed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed,
-                Time.deltaTime * AccelerationRate);
-
-            // round speed to 3 decimal places
-            movementSpeed = Mathf.Round(movementSpeed * 1000f) / 1000f;
-        }
-        else
-        {
-            movementSpeed = targetSpeed;
-        }
+        movementSpeed = Mathf.MoveTowards(movementSpeed, targetSpeed, AccelerationRate * Time.deltaTime);
 
         var movementDirection = new Vector3(movementInput.x, 0, movementInput.y).normalized;
+
+        if(movementLogsEnabled)
+            Debug.Log($"Current Horizontal Speed: {currentHorizontalSpeed}, Movement Speed: {movementSpeed}, Movement Direction: {movementDirection}");
 
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
@@ -114,6 +110,9 @@ public class PlayerController : SerializedMonoBehaviour
         var movementMotion = targetDirection.normalized * (movementSpeed * Time.deltaTime) + new Vector3(0.0f, verticalVelocity, 0.0f) * Time.deltaTime;
         movementMotion = ApplySlide(movementMotion);
 
+        if(movementLogsEnabled)
+            Debug.Log($"Movement Motion: {movementMotion}");
+
         // move the player
         playerBody.Move(movementMotion);
 
@@ -122,30 +121,36 @@ public class PlayerController : SerializedMonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // Convert threshold angle to a y-normal value
-        // A vertical wall has normal.y = 0, a flat floor has normal.y = 1
-        float angleThresholdNormal = Mathf.Sin(slideAngleThreshold * Mathf.Deg2Rad);
+        float angleThresholdNormal = Mathf.Cos(slideAngleThreshold * Mathf.Deg2Rad);
 
         if (hit.normal.y < angleThresholdNormal)
         {
-            slideNormal = hit.normal;
+            slideNormal = hit.normal.normalized;
             isSliding = true;
         }
     }
 
-    private Vector3 ApplySlide(Vector3 moveDirection)
+    private Vector3 ApplySlide(Vector3 move)
     {
-        if (!isSliding) return moveDirection;
+        if (!isSliding) return move;
 
-        Vector3 projected = Vector3.ProjectOnPlane(moveDirection, slideNormal);
+        Vector3 horizontal = new Vector3(move.x, 0f, move.z);
+        float intoWall = Vector3.Dot(horizontal, slideNormal);
 
-        // ProjectOnPlane reduces magnitude — restore it to original speed
-        if (projected.magnitude > 0.001f)
-            projected = projected.normalized * moveDirection.magnitude;
+        if (intoWall < 0f)
+        {
+            // Remove the into-wall component
+            Vector3 deflected = horizontal - slideNormal * intoWall;
 
-        Vector3 result = Vector3.Lerp(projected, moveDirection, slideFriction);
+            // Restore original horizontal speed so the player
+            // slides at full speed along the wall, not reduced speed
+            if (deflected.magnitude > 0.001f)
+                horizontal = deflected.normalized * horizontal.magnitude;
+            else
+                horizontal = Vector3.zero; // perfectly head-on — full stop
+        }
 
         isSliding = false;
-        return result;
+        return new Vector3(horizontal.x, move.y, horizontal.z);
     }
 }

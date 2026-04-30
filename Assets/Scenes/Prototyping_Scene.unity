@@ -1070,8 +1070,9 @@ MonoBehaviour:
   RunningSpeed: 5
   RotationSmoothTime: 0.12
   Gravity: -15
-  slideAngleThreshold: 30
+  slideAngleThreshold: 45
   slideFriction: 0
+  movementLogsEnabled: 1
 --- !u!114 &1210667037
 MonoBehaviour:
   m_ObjectHideFlags: 0
